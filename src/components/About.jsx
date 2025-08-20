@@ -1,34 +1,34 @@
 import React from "react";
 import AboutImg from "../assets/mobile_bg.jpg";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+    const { t, i18n } = useTranslation();
   return (
     <div
       id="aboutme"
-      className="bg-[#F4F4F4] flex justify-center items-center py-[90px] my-[90px] p-0"
+      className="bg-[#F4F4F4] flex justify-center items-center pt-[50px] md:pt-auto py-[90px] my-[90px] p-0"
     >
       <div className="max-w-[800px] px-[16px] mx-auto">
-        <div className="flex flex-col md:flex-row  items-center justify-center gap-[25px] md:gap-[50px] w-full ">
+        <div className="flex flex-col md:flex-row text-center md:text-left items-center justify-center gap-[25px] md:gap-[50px] w-full ">
           <div>
             <img
               src={AboutImg}
               alt="about_img"
-              className="w-[450px] rounded-[20px]"
+              className="hidden md:block w-[450px] rounded-[20px]"
             />
           </div>
           <div className="font-poppins">
-            <h2 className="text-[32px] font-semibold">About Me</h2>
+            <h2 className="text-[32px] capitalize font-semibold">{t('aboutme')}</h2>
             <p className="flex flex-col gap-[20px] mt-[20px]">
               <span>
-                Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in
-                design and everything connected with it.
+                {t("about_info1")}
               </span>
               <span>
-                I'm studying at courses "Web and mobile design interfaces" in
-                IT-Academy.
+                {t("about_info2")}
               </span>
               <span>
-                Ready to implement excellent projects with wonderful people.
+                {t("about_info3")}
               </span>
             </p>
           </div>

@@ -4,8 +4,10 @@ import Illustrator from "../assets/adobe_illustrator.png";
 import Effect from "../assets/adobe_effect.png";
 import Figma from "../assets/figma.png";
 import { IoStarOutline, IoStarSharp } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+    const { t, i18n } = useTranslation();
   const skillsItems = [
     { img: Photoshop, name: "Adobe Photoshop" },
     { img: Illustrator, name: "adobe illustrator" },
@@ -15,8 +17,8 @@ const Skills = () => {
   return (
     <div className="max-w-[1100px] mx-auto pb-[80px]" id="skills">
         <div className="text-center font-poppins">
-      <h2 className="text-[38px] font-semibold ">Skills</h2>
-      <p className="text-[18px] my-[30px] md:my-[60px]">I work in such programs as</p>
+      <h2 className="text-[38px] font-semibold capitalize">{t('skills')}</h2>
+      <p className="text-[18px] my-[30px] md:my-[60px]">{t('skills_info')}</p>
         </div>
       <div className="flex flex-col md:flex-row items-center justify-between gap-[50px] md:gap-[30px] mt-[50px] md:mt-[80px]">
         {skillsItems.map((item, index) => {
