@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="block md:hidden text-[38px] mt-[45px]" onClick={handleClick}>
           <IoMdMenu />
         </div>
-        <nav className={`block md:hidden absolute font-poppins w-full top-0 bg-white h-[100vh] pt-[50px] transition-all duration-300 ${nav ? 'translate-x-0' : '-translate-x-full'}`}>
+        <nav className={`block md:hidden fixed font-poppins w-full top-0 bg-white h-[100vh] pt-[50px] transition-all duration-300 ${nav ? 'translate-x-0' : '-translate-x-[500px]'}`}>
           <ul className="flex flex-col gap-[30px] ml-[10px]">
             {navItems.map((item, index) => {
               return (
